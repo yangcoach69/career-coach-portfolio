@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>양희성 | 커리어코치 포트폴리오</title>
+    <meta
+      name="description"
+      content="커리어비타민 대표코치 양희성. 생성형 AI와 사람 중심 코칭을 결합한 진로·취업·전직 커리어 코칭."
+    />
+    <meta name="theme-color" content="#1a1a1d" />
+
+    <!-- Pretendard -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <!-- Noto Sans KR fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                'Pretendard Variable',
+                'Pretendard',
+                'Noto Sans KR',
+                'system-ui',
+                'sans-serif',
+              ],
+            },
+            colors: {
+              background: '#161618',
+              foreground: '#f7f7f7',
+              card: '#202023',
+              muted: '#2a2a2e',
+              'muted-foreground': '#a1a1a1',
+              border: 'rgba(255,255,255,0.10)',
+              secondary: '#272729',
+              primary: '#d6a85a',
+              'primary-foreground': '#2a2113',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR',
+          system-ui, sans-serif;
+      }
+      .scroll-mt {
+        scroll-margin-top: 5rem;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <!-- HEADER -->
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300"
+    >
+      <div
+        class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5"
+      >
+        <a
+          href="#top"
+          class="text-base font-bold tracking-tight"
+        >
+          <span class="text-primary">YANG</span><span class="text-foreground">COACH</span>
+        </a>
+
+        <nav class="hidden items-center gap-1 md:flex">
+          <a href="#about" class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">소개</a>
+          <a href="#tools" class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">개발·도구</a>
+          <a href="#career" class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">약력</a>
+          <a href="#lectures" class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">주요 출강 실적</a>
+          <a href="#contact" class="ml-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">출강 문의</a>
+        </nav>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-full text-foreground md:hidden"
+          aria-label="메뉴 열기"
+          aria-expanded="false"
+        >
+          <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <nav id="mobile-nav" class="hidden border-t border-border bg-background/95 px-5 py-3 backdrop-blur-md md:hidden">
+        <a href="#about" class="mobile-link block rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">소개</a>
+        <a href="#tools" class="mobile-link block rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">강점·도구</a>
+        <a href="#career" class="mobile-link block rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">약력</a>
+        <a href="#lectures" class="mobile-link block rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">주요 출강 실적</a>
+        <a href="#contact" class="mobile-link mt-2 block rounded-lg bg-primary px-3 py-3 text-center text-sm font-semibold text-primary-foreground">출강 문의</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="top" class="relative overflow-hidden px-5 pb-20 pt-28 md:pb-28 md:pt-36">
+        <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-primary/5 blur-3xl"></div>
+
+        <div class="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <span class="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+              커리어비타민 대표코치
+            </span>
+
+            <h1 class="mt-6 text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl">
+              <span class="block whitespace-nowrap text-foreground">Lululala, 코칭이 즐겁다!</span>
+              <span class="block text-primary">대한민국 No.1 커리어코치</span>
+            </h1>
+
+            <p class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+              안녕하세요, 커리어코치 양희성입니다. 생성형 AI와 사람 중심의 코칭을 결합해 진로 탐색부터 취업·전직까지, 당신의 다음 챕터를 함께 설계합니다.
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#contact" class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">출강 문의하기</a>
+              <a href="#about" class="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary">
+                더 알아보기
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+              </a>
+            </div>
+
+            <dl class="mt-12 grid max-w-md grid-cols-3 gap-6">
+              <div><dt class="text-3xl font-bold text-primary">15Y+</dt><dd class="mt-1 text-xs text-muted-foreground">커리어 코칭</dd></div>
+              <div><dt class="text-3xl font-bold text-primary">4</dt><dd class="mt-1 text-xs text-muted-foreground">종 커리어 도구 개발</dd></div>
+              <div><dt class="text-3xl font-bold text-primary">300+</dt><dd class="mt-1 text-xs text-muted-foreground">기관·기업 출강</dd></div>
+            </dl>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-sm">
+            <div class="absolute inset-0 -rotate-3 rounded-3xl border border-primary/20"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-border bg-card">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/STS_2024_11_22__0674-7VHQqwCmQWcfuNM0U9zen0ENvZXyg8.jpg"
+                alt="커리어코치 양희성 프로필 사진"
+                class="aspect-[3/4] w-full object-cover"
+                crossorigin="anonymous"
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-background/40 to-transparent p-5">
+                <p class="text-lg font-bold">양희성</p>
+                <p class="text-sm text-primary">Career Coach · KAC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="scroll-mt px-5 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-widest text-primary">About</p>
+              <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl">사람과 AI를 잇는<br />커리어 파트너</h2>
+            </div>
+            <div class="space-y-5 text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p>저는 SW 엔지니어로 커리어를 시작해 삼성 청년SW아카데미(SSAFY), 숭실대·숙명여대·단국대 등 대학 현장에서 수많은 취업과 전직을 지원해 왔습니다.</p>
+              <p>지금은 커리어비타민 대표코치이자 이음길 전직지원 전문 강사로서, AI 리터러시와 사람 중심의 코칭을 결합한 새로운 커리어 솔루션을 만들어가고 있습니다. 직업상담사 1급, 한국코치협회 인증코치(KAC), MBTI·Strong·NLP 등 다수의 전문 자격을 기반으로 신뢰할 수 있는 코칭을 제공합니다.</p>
+            </div>
+          </div>
+
+          <div class="mt-14 grid gap-5 sm:grid-cols-3">
+            <div class="rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg></div>
+              <h3 class="mt-5 text-xl font-bold">Fun</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">편안한 분위기 속에서 자연스럽게 마음을 여는 코칭을 지향합니다.</p>
+            </div>
+            <div class="rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+              <h3 class="mt-5 text-xl font-bold">Passionate</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">한 사람 한 사람의 가능성을 끝까지 믿고 함께 끝까지 달립니다.</p>
+            </div>
+            <div class="rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div>
+              <h3 class="mt-5 text-xl font-bold">Innovative</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">AI와 도구를 활용해 누구도 생각 못한 진로의 길을 함께 찾습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLS -->
+      <section id="tools" class="scroll-mt border-y border-border bg-card/40 px-5 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-primary">Career Tools</p>
+          <h2 class="mt-3 max-w-2xl text-balance text-3xl font-bold tracking-tight md:text-4xl">직접 개발한 커리어 코칭 도구</h2>
+          <p class="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground">이론에 머물지 않고, 현장에서 바로 쓰이는 도구를 직접 만들어 코칭의 효과를 높입니다.</p>
+
+          <div class="mt-12 grid gap-5 sm:grid-cols-2">
+            <article class="group relative flex flex-col rounded-2xl border border-border bg-background p-7 transition-colors hover:border-primary/40">
+              <div class="flex items-center justify-between">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div>
+                <span class="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">온라인 도구</span>
+              </div>
+              <p class="mt-6 font-mono text-sm text-primary">2025</p>
+              <h3 class="mt-1 text-lg font-bold">커리어 AI 대시보드 올인원 (CADA)</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Powered by Google Gemini Developer API </p>
+              <a href="https://ai.career-vitamin.com" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary transition-opacity hover:opacity-80">
+                ai.career-vitamin.com
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </article>
+            <article class="group relative flex flex-col rounded-2xl border border-border bg-background p-7 transition-colors hover:border-primary/40">
+              <div class="flex items-center justify-between">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
+                <span class="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">카드 도구</span>
+              </div>
+              <p class="mt-6 font-mono text-sm text-primary">2025</p>
+              <h3 class="mt-1 text-lg font-bold">다섯손가락 · BIG 5 성격캐릭터 카드</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Big 5 성격 모델을 캐릭터 카드로 풀어내 자기 이해를 쉽고 직관적으로 돕는 도구입니다.</p>
+              <a href="https://yangcoach.liveklass.com/classes/268697" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary transition-opacity hover:opacity-80">
+                yangcoach.liveklass.com
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </article>
+            <article class="group relative flex flex-col rounded-2xl border border-border bg-background p-7 transition-colors hover:border-primary/40">
+              <div class="flex items-center justify-between">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
+                <span class="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">카드 도구</span>
+              </div>
+              <p class="mt-6 font-mono text-sm text-primary">2021</p>
+              <h3 class="mt-1 text-lg font-bold">커리어스타일 카드 (학토재 刊)</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">자신의 일하는 방식과 가치를 발견하도록 설계된 카드형 커리어 코칭 도구입니다.</p>
+            </article>
+            <article class="group relative flex flex-col rounded-2xl border border-border bg-background p-7 transition-colors hover:border-primary/40">
+              <div class="flex items-center justify-between">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div>
+                <span class="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">온라인 도구</span>
+              </div>
+              <p class="mt-6 font-mono text-sm text-primary">2023</p>
+              <h3 class="mt-1 text-lg font-bold">커리어넥스트 (Career Next)</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">온라인에서 진로 탐색과 리포트 작성 자동화를 지원하는 디지털 커리어 도구입니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAREER -->
+      <section id="career" class="scroll-mt px-5 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-primary">Career</p>
+          <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl">약력 &amp; 전문 자격</h2>
+
+          <div class="mt-12 grid gap-12 md:grid-cols-2">
+            <div>
+              <h3 class="mb-6 inline-flex items-center gap-2 text-lg font-bold"><span class="rounded-md bg-primary/15 px-2.5 py-1 text-sm text-primary">현재</span></h3>
+              <ul class="relative space-y-6 border-l border-border pl-6">
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">커리어비타민</p><p class="mt-0.5 text-sm text-muted-foreground">대표코치</p></li>
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">이음길</p><p class="mt-0.5 text-sm text-muted-foreground">전직지원 전문 강사 (AI 리터러시)</p></li>
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">KG 내일코칭 · 코칭패스</p><p class="mt-0.5 text-sm text-muted-foreground">취업·진학 코치</p></li>
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">스탭스(STAFFS)</p><p class="mt-0.5 text-sm text-muted-foreground">수석 컨설턴트 · 취업강사</p></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mb-6 inline-flex items-center gap-2 text-lg font-bold"><span class="rounded-md bg-primary/15 px-2.5 py-1 text-sm text-primary">경력</span></h3>
+              <ul class="relative space-y-6 border-l border-border pl-6">
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">삼성 청년SW아카데미 (SSAFY)</p><p class="mt-0.5 text-sm text-muted-foreground">취업컨설턴트 (차장)</p></li>
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">숭실대 대학일자리플러스센터</p><p class="mt-0.5 text-sm text-muted-foreground">PM컨설턴트</p></li>
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">숙명여대 · 단국대 · 한세대</p><p class="mt-0.5 text-sm text-muted-foreground">취업지원관 · 강의교수</p></li>
+                <li class="relative"><span class="absolute -left-[27px] top-1.5 h-3 w-3 rounded-full border-2 border-primary bg-background"></span><p class="font-semibold leading-snug">제일합섬 · 매일경제신문사</p><p class="mt-0.5 text-sm text-muted-foreground">SW 엔지니어</p></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-16">
+            <h3 class="text-lg font-bold">자격 &amp; 학위</h3>
+            <ul class="mt-5 flex flex-wrap gap-2.5">
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">직업상담사 1급</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">청소년지도사 2급</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">한국코치협회 인증코치(KAC)</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">MBTI · Strong · Prediger 공인강사</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">국제공인 NLP 프랙티셔너</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">Birkman 디브리퍼</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">국제공인 MS 공인개발자(MCSD)</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">경영학석사(MBA, e-Biz 전략경영)</li>
+              <li class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">영어영문학 학사</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- LECTURES -->
+      <section id="lectures" class="scroll-mt border-t border-border bg-card/40 px-5 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-primary">Lectures</p>
+          <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl">주요 출강 실적</h2>
+          <p class="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground">대기업·공공기관·대학 등 다양한 현장에서 커리어와 AI 리터러시 강의를 진행해 왔습니다.</p>
+
+          <div class="mt-12 grid gap-5 md:grid-cols-3">
+            <div class="rounded-2xl border border-border bg-background p-7">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
+                <h3 class="text-lg font-bold">주요 기업</h3>
+              </div>
+              <ul class="mt-5 space-y-2.5">
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>현대자동차</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>현대모비스</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>현대제철</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>기아자동차</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>KT</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>LG유플러스</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>삼성화재</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>두산디지털이노베이션</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>롯데백화점</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-border bg-background p-7">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+                <h3 class="text-lg font-bold">공공기관</h3>
+              </div>
+              <ul class="mt-5 space-y-2.5">
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>한국문화재단 · 한국교통연구원</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>과천도시공사 · 동서발전</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>한국도로공사 · 서울교통공사</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>경기도일자리재단 · 경기인력개발원</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>충남평생교육진흥원 (서산/태안/예산/논산/청양)</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>전국 고용센터 (서울/인천/대전/대구/춘천 등)</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>여성능력개발센터 (종로/서울북부/용산/인천 등)</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>이천시청 · 서울시일자리센터</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-border bg-background p-7">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
+                <h3 class="text-lg font-bold">대학 · 특성화고</h3>
+              </div>
+              <ul class="mt-5 space-y-2.5">
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>서울과기대 · 삼육대 · 호서대</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>숙명여대 · 단국대 · 한세대</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>덕성여대 · 연성대 · 예원예술대</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>충북대 · 충남도립대 · 청운대</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>가톨릭관동대 · 경복대 · 경운대</li>
+                <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"></span>한국폴리텍대 외 다수 대학·특성화고</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="scroll-mt px-5 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl">
+          <div class="overflow-hidden rounded-3xl border border-border bg-card">
+            <div class="grid gap-10 p-8 md:grid-cols-2 md:p-12">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-widest text-primary">Contact</p>
+                <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl">당신의 다음 챕터,<br />함께 시작해요</h2>
+                <p class="mt-4 text-pretty leading-relaxed text-muted-foreground">커리어 코칭, 강의, 도구 협업 등 어떤 문의든 환영합니다. 편하게 연락 주세요.</p>
+              </div>
+
+              <div class="grid gap-3 sm:grid-cols-2">
+                <div class="flex items-center gap-3 rounded-2xl border border-border bg-background p-5">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                  <div class="min-w-0"><p class="text-xs text-muted-foreground">전화</p><p class="font-medium">070-7135-9707</p></div>
+                </div>
+                <a href="mailto:yangcoach@gmail.com" class="flex items-center gap-3 rounded-2xl border border-border bg-background p-5 transition-colors hover:border-primary/40">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+                  <div class="min-w-0"><p class="text-xs text-muted-foreground">이메일</p><p class="break-all text-sm font-medium leading-snug">yangcoach@gmail.com</p></div>
+                </a>
+                <div class="flex items-center gap-3 rounded-2xl border border-border bg-background p-5">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+                  <div class="min-w-0"><p class="text-xs text-muted-foreground">카카오 ID</p><p class="font-medium">yangcoach</p></div>
+                </div>
+                <a href="https://www.career-vitamin.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-2xl border border-border bg-background p-5 transition-colors hover:border-primary/40">
+                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+                  <div class="min-w-0"><p class="text-xs text-muted-foreground">웹사이트</p><p class="truncate font-medium">career-vitamin.com</p></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-border px-5 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-sm text-muted-foreground sm:flex-row">
+        <p class="font-bold"><span class="text-primary">YANG</span><span class="text-foreground">COACH</span></p>
+        <p id="footer-copy">© 양희성 커리어코치. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Header scroll style
+      const header = document.getElementById('site-header');
+      const onScroll = () => {
+        if (window.scrollY > 16) {
+          header.classList.add('border-border', 'bg-background/80', 'backdrop-blur-md');
+          header.classList.remove('border-transparent');
+        } else {
+          header.classList.remove('border-border', 'bg-background/80', 'backdrop-blur-md');
+          header.classList.add('border-transparent');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Mobile menu toggle
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('mobile-nav');
+      const iconMenu = document.getElementById('icon-menu');
+      const iconClose = document.getElementById('icon-close');
+      const setOpen = (open) => {
+        nav.classList.toggle('hidden', !open);
+        iconMenu.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      };
+      toggle.addEventListener('click', () =>
+        setOpen(nav.classList.contains('hidden'))
+      );
+      document.querySelectorAll('.mobile-link').forEach((a) =>
+        a.addEventListener('click', () => setOpen(false))
+      );
+
+      // Footer year
+      document.getElementById('footer-copy').textContent =
+        '© ' + new Date().getFullYear() + ' Career Vitamin. All rights reserved.';
+    </script>
+  </body>
+</html>
